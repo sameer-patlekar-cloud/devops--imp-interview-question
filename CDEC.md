@@ -22,6 +22,13 @@ Here is the updated `README.md` file with the additional questions included:
 
 6. **How do you enable SELinux for a new virtual host directory?**
     - Use the `semanage fcontext -a -t httpd_sys_content_t '/path/to/new/directory(/.*)?'` command followed by `restorecon -Rv /path/to/new/directory` to apply the new context.
+# Verify the context
+ls -ldZ /var/www/new_virtual_host
+
+
+
+
+
 
 ## Scripting and Automation
 
